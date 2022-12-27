@@ -2,4 +2,4 @@
 
 Run with `cargo run`
 
-based off of tutorial found at https://dev.to/hackmamba/build-a-rest-api-with-rust-and-mongodb-rocket-version-ah5
+based off of data from https://www.kaggle.com/datasets/kabhishm/social-progress-index?resource=download and uploaded into a local mongo docker container
