@@ -9,7 +9,7 @@ extern crate rocket;
 // https://dev.to/hackmamba/build-a-rest-api-with-rust-and-mongodb-rocket-version-ah5
 
 // add import below
-use api::user_api::{create_user, get_user, update_user, delete_user, get_all_users}; //import the handler here
+use api::spi_api::{get_spi, get_all_spis};//update_user, delete_user, get_all_users}; //import the handler here
 use repository::mongodb_repo::MongoRepo;
 
 #[launch]
@@ -17,10 +17,10 @@ fn rocket() -> _ {
     let db = MongoRepo::init();
     rocket::build()
         .manage(db)
-        .mount("/", routes![create_user])
-        .mount("/", routes![get_user])
-        .mount("/", routes![update_user])
-        .mount("/", routes![delete_user])
-        .mount("/", routes![get_all_users])
+        // .mount("/", routes![create_user])
+        .mount("/", routes![get_spi])
+        // .mount("/", routes![update_user])
+        // .mount("/", routes![delete_user])
+        .mount("/", routes![get_all_spis])
 }
 
